@@ -42,12 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Toast.makeText(MainActivity.this, listname.get(position), Toast.LENGTH_SHORT).show();
-                    listname.set(position,"");
+                    listname.remove(position);
                     adapter.notifyDataSetChanged();
                 }
             });
         });
-
     }
-
 }
